@@ -23,9 +23,9 @@ exports.handler = function (event, context, callback) {
 		}
 	});
 
-	ddb.get({
+	ddb.put({
 		TableName: 'sample',
-		Key: { 'test': 'test' }
+		Item: {}
 	}, function (err, data) {
 		if (err) {
 			console.log('error', err);
