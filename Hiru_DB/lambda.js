@@ -6,11 +6,23 @@ exports.handler = function (event, context, callback) {
 		Item: { 'ID': '001', 'Name': 'Hiru', 'Role': 'QA' }
 	}, function (err, data) {
 		if (err) {
-			console.log('error',err);
+			console.log('error', err);
 		} else {
 			console.log('data', data);
 		}
 	});
+
+	ddb.put({
+		TableName: 'Hiru_error',
+		Item: { 'sample': '001' }
+	}, function (err, data) {
+		if (err) {
+			console.log('error', err);
+		} else {
+			console.log('error', err);
+		}
+	});
+
 
 
 	callback(null, 'Successfully executed');
