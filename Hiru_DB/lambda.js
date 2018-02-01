@@ -13,6 +13,18 @@ exports.handler = function (event, context, callback) {
 		}
 	});
 
+	ddb.put({
+		TableName: 'sample',
+		Item: {}
+	}, function (err, data) {
+		if (err) {
+			console.log(err);
+		} else {
+			console.log(data);
+		}
+	});
+
+
 
 
 
